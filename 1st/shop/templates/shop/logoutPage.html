@@ -1,0 +1,44 @@
+{% extends 'shop/basic.html' %}
+
+ {% block css %}
+
+
+    .h-txt{
+        max-width: 650px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: black;
+    }
+    .h-txt span{
+        letter-spacing:5px;
+    }
+    .h-txt h1{
+        font-size: 3.5em;
+    }
+    .h-txt a{
+        text-decoration: none;
+        background: indianred;
+        color: white;
+        padding: 10px 20px;
+        letter-spacing: 5px;
+        transition:  0.4s;
+    }
+     .h-txt a:hover{
+            background: transparent;
+            border:1px solid indianred;
+      }
+
+       {% endblock %}
+  {% block body %}
+
+    <section class="h-txt">
+        <h4>For Log Out</h4>
+        <h1> Click Below </h1>
+
+        <br>
+        <a href="{% url 'logoutt'%}">Log Out</a>
+    </section>
+{% endblock %}
